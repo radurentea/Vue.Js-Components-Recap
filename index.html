@@ -24,12 +24,12 @@
             </h2>
 
             <div class="plans">
-                <plan-picker v-for="plan in plans" :name=plan></plan-picker>
+                <plan v-for="plan in plans" :name=plan></plan>
             </div>
         </div>
     </div>
 
-    <script type="text/x-template" id="plan-picker-template">
+    <script type="text/x-template" id="plan-template">
         <div class="plan" >
             <div class="description">
                 <span class="title">

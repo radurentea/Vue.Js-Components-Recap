@@ -1,5 +1,5 @@
-Vue.component('plan-picker', {
-  template: '#plan-picker-template',
+Vue.component('plan', {
+  template: '#plan-template',
   props: {
     name: String,
   },
