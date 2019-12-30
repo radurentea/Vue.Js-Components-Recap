@@ -5,23 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <div id="app">
-        <h1>Vue.Js</h1>
-        <click-counter></click-counter>
-        <click-counter></click-counter>
-        <click-counter></click-counter>
-        <click-counter></click-counter>
-        <click-counter></click-counter>
+    <div id="app" class="container mx-auto py-6">
+        <header>
+            <div>
+                <span id="logo">Liquid Gold Box</span>
+            </div>
+        </header>
 
+        <div class="content">
+            <h1 class="title">Coffee Plans</h1>
+
+            <h2 class="subtitle">
+                We travel the world to source the very best single origin coffee for you
+            </h2>
+
+            <div class="plans">
+                <plan-picker v-for="plan in plans" :name=plan></plan-picker>
+            </div>
+        </div>
     </div>
 
-    <script type="text/x-template" id="click-counter-template">
-        <div>
-            <p>Count is:</p>
-            <button @click="count++">{{ count }}</button>
+    <script type="text/x-template" id="plan-picker-template">
+        <div class="plan" >
+            <div class="description">
+                <span class="title">
+                    {{name}}
+                </span>
+            </div>
         </div>
     </script>
 
